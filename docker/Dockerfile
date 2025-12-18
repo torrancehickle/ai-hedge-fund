@@ -18,5 +18,7 @@ RUN poetry config virtualenvs.create false \
 # Copy rest of the source code
 COPY . /app/
 
+COPY ./tests /tests/
+
 # Default command (will be overridden by Docker Compose)
 CMD ["python", "src/main.py"] 
